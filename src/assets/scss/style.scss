@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@forward "./settings/wpcomment";
+@forward "./settings/reset";
+@forward "./settings/import";
+@use "./settings/variable" as *;
+@use "./settings/mixin" as *;
+/*--------------------------------------------
+main
+---------------------------------------------*/
+@forward "./main.scss";

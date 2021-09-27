@@ -1,0 +1,35 @@
+@use "./variable" as *;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin first {
+  &:first-of-type {
+    @content;
+  }
+}
+@mixin notfirst {
+  &:not(:first-of-type) {
+    @content;
+  }
+}
+@mixin last {
+  &:last-of-type {
+    @content;
+  }
+}
+@mixin notlast {
+  &:not(:last-of-type) {
+    @content;
+  }
+}
+
+@mixin clamp($size: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $size;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
