@@ -1,0 +1,77 @@
+@use "../settings/variable" as *;
+@use "../settings/mixin" as *;
+
+.singularContent {
+  > * {
+    @include notfirst {
+      margin-top: 16px;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  a {
+    color: blue;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  .wp-block-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .wp-block-table {
+    table {
+      width: 100%;
+      border: 2px solid #666;
+      tr {
+        > td {
+          @include notlast {
+            border-right: 2px solid #666;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    > li {
+      list-style: disc;
+      list-style-position: inside;
+    }
+  }
+  ol {
+    > li {
+      list-style: decimal;
+      list-style-position: inside;
+    }
+  }
+  .wp-block-quote {
+    border-left: 4px solid #999;
+    padding: 16px 12px;
+
+    p {
+      font-size: 14px;
+    }
+    cite {
+      display: block;
+      text-align: right;
+    }
+  }
+  .wp-block-cover {
+  }
+  .wp-block-gallery {
+  }
+}
